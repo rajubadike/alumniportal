@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vel Tech University </title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\Raju Badike\Downloads\favicon_io\android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="C:\Users\Raju Badike\Downloads\favicon_io\android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="C:\Users\Raju Badike\Downloads\favicon_io\android-chrome-192x192.png">
+<link rel="manifest" href="C:\Users\Raju Badike\Downloads\favicon_io\androi d-chrome-192x192.png" >
+    
+     <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background:rgba(0, 0,0 , 0.7)url(alumni\ background.jpg);
+    background-blend-mode:darken;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.container{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.container h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.container input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.container input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+
+.container .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.container .link a{
+    color:#ff7200 ;
+    text-decoration: none;
+    
+  
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+a{
+    
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        padding-top: 20px;
+        text-align: center;
+        cursor: pointer;
+    
+    color: #06ffda;
+    text-decoration: none;
+    
+  
+}
+#successMessage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        #successMessage.show {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">VEL TECH UNIVERSITY</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="C:\Users\Raju Badike\Downloads\vel.html">HOME</a></li>
+                    <li><a href="C:\Users\Raju Badike\Downloads\events.html">EVENTS</a></li>
+                    <li><a href="C:\Users\Raju Badike\Downloads\gallery.html">Gallery</a></li>
+                    <li><a href="C:\Users\Raju Badike\Downloads\news.html">NEWS</a></li>
+                    <li><a href="C:\Users\Raju Badike\Downloads\about.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>    
+
+        </div> 
+        <div class="content">
+            <h1>ALUMNI <br><span>MANAGEMENT</span> <br>PORTAL</h1>
+            <p class="par">Students can access this portal to participate in college alumini programs
+         <br> there are various there are various activities and events are conducted
+                <br> All students are heartly welcome to this event and make it successful</p>
+
+                <button class="cn"><a href="#">Visit Us</a></button>
+
+                <div class="container" id="loginContainer">
+                    <h2>Login Here</h2>
+                    <form action="login.php" method="post">
+                        <input type="email" name="email" id="loginEmail" placeholder="Enter Email Here" required>
+                        <input type="password" id="loginPassword" name="password" placeholder="Enter Password Here" required>
+                        <button class="btnn" type="submit">Login</button>
+                   
+                </form><br><br>
+                
+                
+                <a href=""><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Forgot password</b>&nbsp;&NonBreakingSpace;<br></a></a><br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Don't have account?</p>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <span class="link" onclick="toggleForms()"><b>SignUp</b></span>
+
+
+                    
+</div>
+                
+                
+                   
+    <div class="container hidden" id="registerContainer">
+        <h2>Register</h2>
+        <form action="registration.php"   method="post">
+          
+            <input type="email" id="email"   name="Email" placeholder="Enter Email Here" required>
+            <input type="password" id="password" name="password" placeholder="New Password" required>
+            <input type="password" id="repeatpassword" name="repeat_password" placeholder="confirm Password" required>
+            <button class="btnn" name="submit" type="submit"><a href="#">register</a></button>
+        </form><br>
+        <p>Back to login? <span class="link" onclick="toggleForms()">Login here</span></p><br>
+        <div class="icons">
+            <a href="https://application.veltech.edu.in/?utm_source=Facebook&utm_medium=Fbweb&utm_campaign=VTUIHT                                                                                   A"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+    </div>
+
+                   
+
+
+
+
+
+
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        function toggleForms() {
+            const loginContainer = document.getElementById("loginContainer");
+            const registerContainer = document.getElementById("registerContainer");
+            
+            loginContainer.classList.toggle("hidden");
+            registerContainer.classList.toggle("hidden");
+        }
+    </script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+    
+</body>
+</html>
